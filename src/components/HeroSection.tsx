@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -27,7 +28,7 @@ const HeroSection = () => {
         <div className="flex-1 flex justify-center animate-on-scroll">
           <div className="relative w-72 h-72 md:w-80 md:h-80 overflow-hidden rounded-full border-8 border-white shadow-xl">
             <img
-              src="/lovable-uploads/6790d807-798b-45b9-98cb-c9af50242dcf.png"
+              src="/lovable-uploads/5e2f2d88-80dc-42ba-8357-3ef752b67fb1.png"
               alt="Aman Kumar Ray"
               className="w-full h-full object-cover"
             />
@@ -39,3 +40,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
