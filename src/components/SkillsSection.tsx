@@ -9,7 +9,7 @@ import {
   Palette, 
   Layout,
   Server,
-  ReactIcon,
+  Atom,
   Database,
   GitBranch,
   Github,
@@ -42,7 +42,7 @@ const SkillsSection = () => {
         { name: "HTML", icon: FileText },
         { name: "CSS", icon: Palette },
         { name: "Bootstrap", icon: Layout },
-        { name: "React", icon: ReactIcon }
+        { name: "React", icon: Atom }
       ]
     },
     {
