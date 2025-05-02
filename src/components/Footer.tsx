@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,10 @@ const Footer = () => {
             <p>Thank you for visiting my portfolio!</p>
             <div className="mt-4">
               <a href="/resume.pdf" download="Aman_Kumar_Ray_Resume.pdf">
-                <Button variant="outline">Download Resume</Button>
+                <Button variant="outline">
+                  <Download size={16} className="mr-2" />
+                  Download Resume
+                </Button>
               </a>
             </div>
           </div>

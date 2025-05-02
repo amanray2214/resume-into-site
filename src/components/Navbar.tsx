@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,6 +40,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="/resume.pdf" download="Aman_Kumar_Ray_Resume.pdf">
               <Button variant="outline" className="hidden md:inline-flex">
+                <Download size={16} className="mr-2" />
                 Resume
               </Button>
             </a>

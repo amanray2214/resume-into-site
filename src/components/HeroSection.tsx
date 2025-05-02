@@ -1,6 +1,6 @@
 
-
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -20,6 +20,7 @@ const HeroSection = () => {
             </a>
             <a href="/resume.pdf" download="Aman_Kumar_Ray_Resume.pdf">
               <Button variant="outline" size="lg">
+                <Download size={16} className="mr-2" />
                 Download Resume
               </Button>
             </a>
@@ -40,4 +41,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
