@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface Project {
   title: string;
@@ -13,6 +14,7 @@ interface Project {
   description: string[];
   technologies: string[];
   icon: React.ElementType;
+  image: string;
 }
 
 const ProjectsSection = () => {
@@ -26,7 +28,8 @@ const ProjectsSection = () => {
         "Implemented backend functionality with Node.js and Express.js to manage server-side logic and APIs for seamless content delivery"
       ],
       technologies: ["HTML", "CSS", "JavaScript", "Node.js", "React"],
-      icon: Code
+      icon: Code,
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
     },
     {
       title: "Face Detection System",
@@ -37,7 +40,8 @@ const ProjectsSection = () => {
         "Integrated and deployed models on desktop platforms for real-time performance, demonstrating practical implementation of deep learning in computer vision"
       ],
       technologies: ["Python", "OpenCV", "TensorFlow", "Deep Learning", "Jupyter Notebook"],
-      icon: BarChart
+      icon: BarChart,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
     },
     {
       title: "Spotify Songs Popularity Prediction",
@@ -49,7 +53,8 @@ const ProjectsSection = () => {
         "Developed APIs to form a smooth interface between database and the platform"
       ],
       technologies: ["Python", "Spotify API", "Pandas", "Numpy", "Matplotlib", "Jupyter Notebook"],
-      icon: Music
+      icon: Music,
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
     }
   ];
 
@@ -59,15 +64,24 @@ const ProjectsSection = () => {
         <h2 className="section-heading">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="project-card animate-on-scroll">
-              <CardHeader className="pb-4">
+            <Card key={index} className="project-card animate-on-scroll overflow-hidden">
+              <div className="relative">
+                <AspectRatio ratio={16/9}>
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="object-cover w-full h-full rounded-t-lg"
+                  />
+                </AspectRatio>
+                <div className="absolute top-3 right-3 p-2 bg-white/90 rounded-full shadow">
+                  <project.icon className="h-6 w-6 text-primary" />
+                </div>
+              </div>
+              <CardHeader className="pb-2">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="p-2 bg-accent rounded-md">
-                    <project.icon className="h-6 w-6 text-primary" />
-                  </div>
+                  <CardTitle>{project.title}</CardTitle>
                   <span className="text-sm text-gray-500">{project.duration}</span>
                 </div>
-                <CardTitle>{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2 text-sm">
