@@ -1,22 +1,19 @@
 
 import { 
-  CPlusPlus, 
-  JavaScript, 
-  Java, 
-  Python, 
-  R, 
-  Html, 
-  Css, 
-  Bootstrap,
-  Nodejs,
-  React as ReactIcon,
-  Mysql,
-  Mongodb,
-  Git,
-  Github,
+  Code, 
+  FileCode, 
+  Coffee, 
+  Binary, 
+  CircleSlash, 
+  FileText, 
+  Palette, 
+  Layout,
+  Server,
+  ReactIcon,
   Database,
-  Code,
-  VisualStudio
+  GitBranch,
+  Github,
+  FileTerminal
 } from "lucide-react";
 
 interface SkillCategory {
@@ -32,38 +29,38 @@ const SkillsSection = () => {
     {
       name: "Languages",
       skills: [
-        { name: "C++", icon: CPlusPlus },
-        { name: "JavaScript", icon: JavaScript },
-        { name: "Java", icon: Java },
-        { name: "Python", icon: Python },
-        { name: "R", icon: R }
+        { name: "C++", icon: Code },
+        { name: "JavaScript", icon: FileCode },
+        { name: "Java", icon: Coffee },
+        { name: "Python", icon: Binary },
+        { name: "R", icon: CircleSlash }
       ]
     },
     {
       name: "Front-end",
       skills: [
-        { name: "HTML", icon: Html },
-        { name: "CSS", icon: Css },
-        { name: "Bootstrap", icon: Bootstrap },
+        { name: "HTML", icon: FileText },
+        { name: "CSS", icon: Palette },
+        { name: "Bootstrap", icon: Layout },
         { name: "React", icon: ReactIcon }
       ]
     },
     {
       name: "Back-end",
       skills: [
-        { name: "Node.js", icon: Nodejs },
+        { name: "Node.js", icon: Server },
         { name: "Express.js", icon: Code },
       ]
     },
     {
       name: "Databases/Tools",
       skills: [
-        { name: "MySQL", icon: Mysql },
-        { name: "MongoDB", icon: Mongodb },
+        { name: "MySQL", icon: Database },
+        { name: "MongoDB", icon: Database },
         { name: "Hadoop", icon: Database },
-        { name: "Git", icon: Git },
+        { name: "Git", icon: GitBranch },
         { name: "GitHub", icon: Github },
-        { name: "Visual Studio", icon: VisualStudio }
+        { name: "Visual Studio", icon: FileTerminal }
       ]
     }
   ];
